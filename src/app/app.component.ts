@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'fwh';
+  title = 'Fallout Wasteland warfare list builder';
+  heroImg = 'src/assets/img/vb_beer.jpg';
 }
