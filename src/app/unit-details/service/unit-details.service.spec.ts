@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 
-import { FactionService } from './faction.service';
+import { UnitDetailsService } from './unit-details.service';
 
-describe('FactionService', () => {
+describe('UnitDetailsService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
-    const service: FactionService = TestBed.get(FactionService);
+    const service: UnitDetailsService = TestBed.get(UnitDetailsService);
     expect(service).toBeTruthy();
   });
 });

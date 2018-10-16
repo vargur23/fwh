@@ -9,7 +9,25 @@ export class JsonService {
 
   constructor() { }
 
-  public getJson(path: string): Observable<any> {
+  getJSONArray<T>(path: string): Observable<T[]> {
+    let result;
+    this.getJson(path).subscribe(json => result = json.data);
+    return of(result);
+  }
+
+  getJSONObjectbyID<T>( path: string, id: string): Observable<T> {
+    let fArr;
+    let result;
+    this.getJson(path).subscribe(json => fArr = json.data);
+    fArr.map(f => {
+      if (f.id === id) {
+        result = f;
+      }
+    });
+    return of(result);
+  }
+
+  private getJson(path: string): Observable<any> {
     const request = new XMLHttpRequest();
     request.open('GET', path, false);
     request.send(null);

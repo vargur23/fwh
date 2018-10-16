@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FactionService } from './service/faction.service';
+
+import * as globals from '../../globals';
+import { JsonService } from '../../services';
 import { Faction} from '../../poo';
+
 
 @Component({
   selector: 'app-faction',
@@ -10,14 +13,14 @@ import { Faction} from '../../poo';
 export class FactionComponent implements OnInit {
 
   factions: Faction[];
-  constructor(private factionService: FactionService) { }
+  constructor(private jsonService: JsonService) { }
 
   ngOnInit() {
     this.getFactions();
   }
 
   getFactions(): void {
-   this.factionService.getFactions().subscribe(factions => this.factions = factions);
+   this.jsonService.getJSONArray<Faction>(globals.factions_json_path).subscribe(factions => this.factions = factions);
   }
 
 }
