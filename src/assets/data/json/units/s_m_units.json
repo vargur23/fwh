@@ -1,0 +1,27 @@
+{
+    "units": [
+        {
+            "id": "aviator",
+            "name": "Aviator",
+            "cost": "67",
+            "perks":["hero","leader"],
+            "does_cary":["aviator_cap"],
+            "may_cary": {   "range_weapon":["assault_rifle","bolt_action_pipe_rilfe"],
+                            "cc_weapon":["baseball_bat","board"],
+                            "throwable" :["molotov"],
+                            "consumables":[]
+                        }
+        },
+        {
+            "id": "behemoth",
+            "name": "Behemoth",
+            "cost": "209"
+            
+        },
+        {
+            "id": "brute",
+            "name": "Brute",
+            "cost": "81"
+        }
+    ]
+}

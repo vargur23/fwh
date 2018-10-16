@@ -1,15 +1,25 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
+import { AppComponent } from './app.component';
+import { FactionComponent } from './faction/faction.component';
+
+import { AppRoutingModule } from '../routing/app-routing.module';
+import { UnitComponent } from './unit/unit.component';
+import { UnitDetailsComponent } from './unit-details/unit-details.component';
+
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
+  ],
+  declarations: [
+    AppComponent,
+    FactionComponent,
+    UnitComponent,
+    UnitDetailsComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

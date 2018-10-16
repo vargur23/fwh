@@ -1,0 +1,16 @@
+{
+    "factions": [
+        {
+            "id": "super_mutants",
+            "name": "Super Mutants"
+        },
+        {
+            "id": "bos",
+            "name": "BoS"
+        },
+        {
+            "id": "surviver",
+            "name": "Surviver"
+        }
+    ]
+}

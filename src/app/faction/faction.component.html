@@ -1,0 +1,8 @@
+<h2>Choose your Faction</h2>
+<ul>
+  <li *ngFor="let faction of factions">
+    <a routerLink="/faction/{{faction.id}}">
+      {{faction.name}}
+    </a>
+  </li>
+</ul>

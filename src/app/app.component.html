@@ -4,9 +4,9 @@
     {{ title }}
   </h1>
   <nav>
-      <a routerLink="/dashboard"><button>Home</button></a>
-
+      <button (click)="goBack()">go back</button>
+    <a routerLink="/faction"><button>Home</button></a>
   </nav>
-  <img width="300" alt="Vault Boy with Beer" src="{{ heroImg }}">
-  </div>
-
+  Current URL is: <code>{{location.path()}}</code><br>
+  <router-outlet></router-outlet>
+</div>
