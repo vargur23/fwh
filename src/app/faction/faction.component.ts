@@ -16,11 +16,6 @@ export class FactionComponent implements OnInit {
   constructor(private jsonService: JsonService) { }
 
   ngOnInit() {
-    this.getFactions();
+    this.jsonService.getFactionArray().subscribe(factions => this.factions = factions);
   }
-
-  getFactions(): void {
-   this.jsonService.getJSONArray<Faction>(globals.factions_json_path).subscribe(factions => this.factions = factions);
-  }
-
 }

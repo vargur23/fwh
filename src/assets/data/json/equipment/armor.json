@@ -1,0 +1,12 @@
+{
+    "data": [
+        {
+            "id": "assault_rifle",
+            "name": "Assault Rifle",
+            "cost": "8",
+            "range": "red, green",
+            "dmg":"2",
+            "dmg_type":"ph"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "data": [
+        {
+            "id": "assault_rifle",
+            "name": "Assault Rifle",
+            "cost": "8",
+            "range": "red, green",
+            "dmg":"2",
+            "dmg_type":"ph"
+        },
+        {
+            "id": "behemoth",
+            "name": "Behemoth",
+            "cost": "209"
+            
+        },
+        {
+            "id": "brute",
+            "name": "Brute",
+            "cost": "81"
+        }
+    ]
+}

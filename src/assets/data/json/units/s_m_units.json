@@ -5,10 +5,17 @@
             "name": "Aviator",
             "cost": "67",
             "perks":["hero","leader"],
-            "does_cary":["aviator_cap"],
-            "may_cary": {   "range_weapon":["assault_rifle","bolt_action_pipe_rilfe"],
-                            "cc_weapon":["baseball_bat","board"],
-                            "throwable" :["molotov"],
+            "does_cary":{
+                            "clothing":["aviator_cap"]
+                        },
+            "options": {   
+                            "armor":[],
+                            "heavy_weapons":[],
+                            "weapons":["assault_rifle","bolt_action_pipe_rilfe"],
+                            "cc_weapons":["baseball_bat","board"],
+                            "hand_weapons":[],
+                            "granates" :["molotov"],
+                            "mines":["baseball_bat","board"],
                             "consumables":[]
                         }
         },

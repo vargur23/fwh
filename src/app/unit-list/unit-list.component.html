@@ -1,0 +1,8 @@
+<div *ngIf="faction">
+    <h2>{{faction.name}} Units</h2>
+    <li *ngFor="let unit of units">
+        <a routerLink="/data/{{faction.id}}/{{unit.id}}">
+       {{unit.name}}: {{unit.cost}}
+       </a>
+    </li>
+  </div>

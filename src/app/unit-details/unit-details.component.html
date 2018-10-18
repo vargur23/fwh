@@ -1,1 +1,14 @@
-I bims
+<div>
+    <div *ngIf="unit">
+        <span><b>{{unit.name}}</b></span><br>
+        <span>{{unit.cost}}</span>
+    </div>
+    <hr>
+    <div>
+        <span><b>Does carry:</b></span><br>
+        <li *ngFor="let item of itemsCarry" (click)="onSelect(item)">                
+            <span><b>{{item.name}}</b></span>:<span>{{item.cost}}</span><br>
+        </li>        
+    </div>
+</div>
+    
