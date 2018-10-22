@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Unit, Faction, Item } from 'src/poo';
 import * as globals from '../globals';
+import { isDate } from 'util';
 
 
 @Injectable({
@@ -72,7 +73,7 @@ export class JsonService {
 
   getItemArrayByIdArray(eqipmentDB: string, ids: string[]): Observable<Item[]> {
     let result: Unit[];
-    this.getJSONArray<Unit>(this.getItemJSONPath(eqipmentDB)).subscribe(units => result = units);
+    this.getJSONArrayByID<Unit>(this.getItemJSONPath(eqipmentDB), ids).subscribe(units => result = units);
     return of(result);
   }
 
@@ -85,15 +86,15 @@ export class JsonService {
   private getItemJSONPath(eqipmentDB): string {
     let path;
     switch (eqipmentDB) {
-      case 'perks': {
-        path = globals.perks_json_path;
+      case 'leader': {
+        path = globals.leader_json_path;
         break;
       }
       case 'armor': {
         path = globals.armor_json_path;
         break;
       }
-      case '14': {
+      case 'clothing': {
         path = globals.clothing_json_path;
         break;
       }

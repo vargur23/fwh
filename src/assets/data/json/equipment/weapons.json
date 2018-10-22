@@ -9,15 +9,64 @@
             "dmg_type":"ph"
         },
         {
-            "id": "behemoth",
-            "name": "Behemoth",
-            "cost": "209"
-            
+            "id": "assaultron_head_laser",
+            "name": "Assaultron Head Laser",
+            "cost": "*"
         },
         {
-            "id": "brute",
-            "name": "Brute",
-            "cost": "81"
+            "id": "bolt_action_pipe_riﬂe",
+            "name": "Bolt-Action Pipe Riﬂe",
+            "cost": "10"
+        },
+        {
+            "id": "combat_riﬂe",
+            "name": "Combat Riﬂe",
+            "cost": "14"
+        },
+        {
+            "id": "combat_shotgun",
+            "name": "Combat Shotgun",
+            "cost": "10"
+        },
+        {
+            "id": "double_barrel_shotgun",
+            "name": "Double-Barrel Shotgun",
+            "cost": "17"
+        },
+        {
+            "id": "hunting_riﬂe",
+            "name": "Hunting Riﬂe",
+            "cost": "20"
+        },
+        {
+            "id": "institute_laser_riﬂe",
+            "name": "Institute Laser Riﬂe",
+            "cost": "17"
+        },
+        {
+            "id": "laser_musket",
+            "name": "Laser Musket",
+            "cost": "11"
+        },
+        {
+            "id": "laser_riﬂe",
+            "name": "Laser Riﬂe",
+            "cost": "30"
+        },
+        {
+            "id": "laser_turret",
+            "name": "Laser Turret",
+            "cost": "10"
+        },
+        {
+            "id": "machine_gun_turret_mk1",
+            "name": "Machine Gun Turret Mk1",
+            "cost": "10"
+        },
+        {
+            "id": "plasma_riﬂe",
+            "name": "Plasma Riﬂe",
+            "cost": "24"
         }
     ]
 }

@@ -3,6 +3,6 @@ export class Unit {
     name: string;
     cost: number;
     does_cary: {};
-    perks: Array<string>[];
+    perks: {};
     options: {};
   }

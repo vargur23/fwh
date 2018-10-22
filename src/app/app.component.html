@@ -1,12 +1,17 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div>
-  <h1>
-    {{ title }}
-  </h1>
-  <nav>
-      <button (click)="goBack()">go back</button>
-    <a routerLink="/data"><button>Factions</button></a>
-  </nav>
-  Current URL is: <code>{{location.path()}}</code><br>
+<div class="mat-typography">
+  <mat-toolbar color="primary">  
+    <mat-toolbar-row>
+      <span> <h1>
+        {{ title }}
+      </h1></span>
+    </mat-toolbar-row>  
+    <mat-toolbar-row>
+        <button (click)="goBack()">go back</button>
+      <span>  
+          Active List: {{list.name}} ({{list.cost}})
+      </span>
+    </mat-toolbar-row>
+    </mat-toolbar>
   <router-outlet></router-outlet>
 </div>

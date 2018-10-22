@@ -1,12 +1,79 @@
 {
     "data": [
         {
-            "id": "assault_rifle",
-            "name": "Assault Rifle",
-            "cost": "8",
-            "range": "red, green",
-            "dmg":"2",
-            "dmg_type":"ph"
+            "id": "armored_pads",
+            "name": "Aviator Cap",
+            "cost": "12"
+        },
+        {
+            "id": "army_helmet",
+            "name": "Army Helmed",
+            "cost": "15"
+        },
+        {
+            "id": "chain_dog_collar",
+            "name": "Chain Dog Collar",
+            "cost": "13"
+        },
+        {
+            "id": "chains",
+            "name": "Chains",
+            "cost": "8"
+        },
+        {
+            "id": "combat_armor",
+            "name": "Combat Armor",
+            "cost": "18"
+        },
+        {
+            "id": "damaged_hazmat_suit",
+            "name": "Damaged Hazmat Suit",
+            "cost": "15"
+        },
+        {
+            "id": "freefall_leg_armor",
+            "name": "Freefall Leg Armor",
+            "cost": "15"
+        },
+        {
+            "id": "heavy_gauntlets",
+            "name": "Heavy Gauntlets",
+            "cost": "15"
+        },
+        {
+            "id": "power_armor_frame",
+            "name": "Power Armor Frame",
+            "cost": "15"
+        },
+        {
+            "id": "rock_bladed_helm",
+            "name": "Rock's Bladed Helm",
+            "cost": "23"
+        },
+        {
+            "id": "sturdy_combat_armor",
+            "name": "Sturdy Combat Armor",
+            "cost": "30"
+        },
+        {
+            "id": "sturdy_leather_armor",
+            "name": "Sturdy Leather Armor",
+            "cost": "23"
+        },
+        {
+            "id": "t_45",
+            "name": "T-45 Power Armor",
+            "cost": "36"
+        },
+        {
+            "id": "t_51",
+            "name": "T-51 Power Armor",
+            "cost": "54"
+        },
+        {
+            "id": "t_60",
+            "name": "T-60 Power Armor",
+            "cost": "72"
         }
     ]
 }

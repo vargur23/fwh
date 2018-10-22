@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import * as globals from '../../globals';
+
 import { JsonService } from '../../services';
 import { Faction} from '../../poo';
 

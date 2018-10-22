@@ -4,14 +4,16 @@
             "id": "aviator",
             "name": "Aviator",
             "cost": "67",
-            "perks":["hero","leader"],
             "does_cary":{
                             "clothing":["aviator_cap"]
                         },
+            "leader":{
+                            "leader":["heroic","berserker"]
+                    },
             "options": {   
                             "armor":[],
                             "heavy_weapons":[],
-                            "weapons":["assault_rifle","bolt_action_pipe_rilfe"],
+                            "weapons":["assault_rifle","bolt_action_pipe_riﬂe"],
                             "cc_weapons":["baseball_bat","board"],
                             "hand_weapons":[],
                             "granates" :["molotov"],

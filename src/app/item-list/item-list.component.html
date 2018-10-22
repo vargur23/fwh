@@ -1,3 +1,9 @@
-<p>
-  item-list works!
-</p>
+<section *ngIf="items?.length > 0">
+    <span><b>{{itemType}} {{subType}}:</b></span><br>
+    <li *ngFor="let item of items">                
+        <mat-checkbox>
+            <b>{{item.name}}</b>:{{item.cost}}
+        </mat-checkbox>    
+        <mat-divider></mat-divider>   
+        </li>     
+</section>

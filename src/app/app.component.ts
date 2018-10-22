@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 
+import { Unit, List, Storage } from '../poo';
+import { StorageService } from 'src/services';
+
 @Component({
   providers: [Location, {provide: LocationStrategy, useClass: PathLocationStrategy}],
   selector: 'app-root',
@@ -12,9 +15,12 @@ export class AppComponent {
 
   title = 'Fallout Wasteland warfare list builder';
   heroImg = 'src/assets/img/vb_beer.jpg';
-  constructor(location: Location){
-    this.location=location;
+  list: List;
+  constructor(location: Location, storageService: StorageService) {
+    this.location = location;
+    this.list = storageService.getActiveList();
   }
+
   goBack(): void {
     this.location.back();
   }

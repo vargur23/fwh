@@ -1,14 +1,18 @@
-<div>
-    <div *ngIf="unit">
-        <span><b>{{unit.name}}</b></span><br>
-        <span>{{unit.cost}}</span>
+<div *ngIf="unit">
+    <div >
+        <span><b>{{unit.name}}</b></span>: <span>{{unit.cost}}</span>
+        <button mat-mini-fab color="primary" (click)="storageService.add()">+</button>
     </div>
     <hr>
-    <div>
-        <span><b>Does carry:</b></span><br>
-        <li *ngFor="let item of itemsCarry" (click)="onSelect(item)">                
-            <span><b>{{item.name}}</b></span>:<span>{{item.cost}}</span><br>
-        </li>        
-    </div>
+    <app-item-list [unit]="unit" itemType="does_cary"></app-item-list>
+    <app-item-list [unit]="unit" itemType="leader"></app-item-list>
+    <app-item-list [unit]="unit" itemType="options" subType="armor"></app-item-list>
+    <app-item-list [unit]="unit" itemType="options" subType="heavy_weapons"></app-item-list>
+    <app-item-list [unit]="unit" itemType="options" subType="weapons"></app-item-list>
+    <app-item-list [unit]="unit" itemType="options" subType="cc_weapons"></app-item-list>
+    <app-item-list [unit]="unit" itemType="options" subType="hand_weapons"></app-item-list>
+    <app-item-list [unit]="unit" itemType="options" subType="granates"></app-item-list>
+    <app-item-list [unit]="unit" itemType="options" subType="mines"></app-item-list>
+    <app-item-list [unit]="unit" itemType="options" subType="consumables"></app-item-list>
 </div>
     

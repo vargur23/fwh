@@ -9,9 +9,9 @@ export const bos_units_json_path = 'src/assets/data/json/units/bos_units.json';
 export const surviver_units_json_path = 'src/assets/data/json/units/survivor_units.json';
 
 // Equipment DB
-export const perks_json_path = 'src/assets/data/json/equipment/perks.json';
 export const armor_json_path = 'src/assets/data/json/equipment/armor.json';
 export const clothing_json_path = 'src/assets/data/json/equipment/clothing.json';
+export const leader_json_path = 'src/assets/data/json/equipment/leader.json';
 export const heavy_weapons_json_path = 'src/assets/data/json/equipment/heavy_weapons.json';
 export const weapons_json_path = 'src/assets/data/json/equipment/weapons.json';
 export const cc_weapons_json_path = 'src/assets/data/json/equipment/cc_weapons.json';
