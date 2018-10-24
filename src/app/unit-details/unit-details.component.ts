@@ -25,4 +25,12 @@ export class UnitDetailsComponent implements OnInit {
       this.jsonService.getUnitByID(id_faction, id_unit).subscribe(unit => this.unit = unit);
       this.storageService.initUnitObject(this.unit);
     }
+
+    setHeroic(e) {
+      if (e.checked) {
+        this.storageService.setHeroic(true);
+      } else {
+        this.storageService.setHeroic(false);
+      }
+    }
 }

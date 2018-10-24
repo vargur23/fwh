@@ -1,6 +1,8 @@
+<section *ngIf="factions ; else loading">
 <h2>Choose your Faction</h2>
 <mat-nav-list>
   <a mat-list-item routerLink="/data/{{faction.id}}" *ngFor="let faction of factions">
     <button mat-raised-button color="primary">{{faction.name}}</button>
   </a>
 </mat-nav-list>
+</section>

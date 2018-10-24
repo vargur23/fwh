@@ -1,7 +1,7 @@
 <section *ngIf="items?.length > 0">
     <span><b>{{itemType}} {{subType}}:</b></span><br>
     <li *ngFor="let item of items">                
-        <mat-checkbox>
+        <mat-checkbox (change)="addItem($event, item)">
             <b>{{item.name}}</b>:{{item.cost}}
         </mat-checkbox>    
         <mat-divider></mat-divider>   

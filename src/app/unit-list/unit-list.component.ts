@@ -25,7 +25,7 @@ export class UnitListComponent implements OnInit {
 
   getData(id: string) {
     this.jsonService.getFactionByID(id).subscribe(faction => this.faction = faction);
-    this.jsonService.getUnitsArrayByFaction(id).subscribe(units => this.units = units);
+    this.jsonService.getUnitsByFaction(id).subscribe(units => this.units = units);
   }
 
 }

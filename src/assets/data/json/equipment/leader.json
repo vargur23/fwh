@@ -1,9 +1,9 @@
 {
     "data": [
         {
-            "id": "heroic",
-            "name": "Heroic",
-            "cost": "60"
+            "id": "berserker",
+            "name": "Berserker",
+            "cost": "20"
         }
     ]
 }

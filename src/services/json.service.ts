@@ -1,14 +1,27 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable, of, EMPTY } from 'rxjs';
 import { Unit, Faction, Item } from 'src/poo';
 import * as globals from '../globals';
-import { isDate } from 'util';
+
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class JsonService {
+
+  readonly EQUIPMENT_DBS = [
+    'leader',
+     'armor',
+      'clothing',
+       'heavy_weapons',
+        'weapons',
+         'cc_weapons',
+          'hand_weapons',
+           'granates',
+            'mines',
+             'consumables'
+            ];
 
   constructor() { }
 
@@ -32,7 +45,7 @@ export class JsonService {
    *  Unit JSON retrieving
    */
 
-  getUnitsArrayByFaction(id_faction): Observable<Unit[]> {
+  getUnitsByFaction(id_faction): Observable<Unit[]> {
     let result: Unit[];
     this.getJSONArray<Unit>(this.getUnitsJSONPath(id_faction)).subscribe(units => result = units);
     return of(result);
@@ -71,15 +84,29 @@ export class JsonService {
    *  Item JSON retrieving
    */
 
-  getItemArrayByIdArray(eqipmentDB: string, ids: string[]): Observable<Item[]> {
+  getItemsByIDs(eqipmentDB: string, ids: string[]): Observable<Item[]> {
     let result: Unit[];
-    this.getJSONArrayByID<Unit>(this.getItemJSONPath(eqipmentDB), ids).subscribe(units => result = units);
+    this.getJSONArrayByID<Unit>(this.getItemJSONPath(eqipmentDB), ids).subscribe(items => result = items);
     return of(result);
   }
 
-  getItemByID(eqipmentDB: string, id_item): Observable<Unit> {
-    let result: Unit;
-    this.getJSONByID<Unit>(this.getItemJSONPath(eqipmentDB), id_item).subscribe(units => result = units);
+  getItemByID(eqipmentDB: string, id_item): Observable<Item> {
+    let result: Item;
+    this.getJSONByID<Item>(this.getItemJSONPath(eqipmentDB), id_item).subscribe(items => result = items);
+    return of(result);
+  }
+
+  searchItemsByIDs(ids: string[]): Observable<Item[]> {
+    const result = [];
+    let itemID;
+    this.EQUIPMENT_DBS.map(db => {
+      ids.map(id => {
+          this.getJSONByID<Item>(this.getItemJSONPath(db), id).subscribe(item => itemID = item );
+          if (itemID) {
+            result.push(itemID);
+          }
+      });
+    });
     return of(result);
   }
 
@@ -140,30 +167,34 @@ export class JsonService {
 
   getJSONArray<T>(path: string): Observable<T[]> {
     let result;
-    this.getJson(path).subscribe(json => result = json.data);
+    this.getJson(path).subscribe(json => result = json);
     return of(result);
   }
 
   getJSONByID<T>( path: string, id: string): Observable<T> {
     let fArr;
     let result;
-    this.getJson(path).subscribe(json => fArr = json.data);
+    this.getJson(path).subscribe(json => fArr = json);
+    if (fArr) {
     fArr.map(f => {
       if (f.id === id) {
         result = f;
       }
     });
+  }
     return of(result);
   }
   getJSONArrayByID<T>( path: string, ids: string[]): Observable<T[]> {
     let fArr;
     const result = [];
-    this.getJson(path).subscribe(json => fArr = json.data);
+    this.getJson(path).subscribe(json => fArr = json);
+    if (fArr) {
     fArr.map(f => {
       if (ids.includes(f.id)) {
         result.push(f);
       }
     });
+  }
     return of(result);
   }
 
@@ -172,6 +203,9 @@ export class JsonService {
     request.open('GET', path, false);
     request.send(null);
     const json = JSON.parse(request.responseText);
-    return of(json);
+    if (json.data) {
+      return of(json.data);
+    }
+    return of([]);
   }
 }

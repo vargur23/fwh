@@ -1,18 +1,30 @@
 <div *ngIf="unit">
+        <mat-grid-list cols="4">
+                <mat-grid-tile [colspan]="3" [rowspan]="1" [style.background]="lightblue">
+                        {{unit.name}}:{{unit.cost}}
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1" [style.background]="lightgreen">
+                        <button mat-mini-fab color="primary" (click)="storageService.add()">+</button>
+                </mat-grid-tile>
+
+        </mat-grid-list>
+
     <div >
-        <span><b>{{unit.name}}</b></span>: <span>{{unit.cost}}</span>
-        <button mat-mini-fab color="primary" (click)="storageService.add()">+</button>
+        <span><b>Does Carry</b></span><hr>
+        {{unit.does_cary}}
     </div>
     <hr>
-    <app-item-list [unit]="unit" itemType="does_cary"></app-item-list>
+    <mat-checkbox (change)="setHeroic($event)">
+        <b>Make heroic</b>:{{60}}
+    </mat-checkbox>    
     <app-item-list [unit]="unit" itemType="leader"></app-item-list>
-    <app-item-list [unit]="unit" itemType="options" subType="armor"></app-item-list>
-    <app-item-list [unit]="unit" itemType="options" subType="heavy_weapons"></app-item-list>
-    <app-item-list [unit]="unit" itemType="options" subType="weapons"></app-item-list>
-    <app-item-list [unit]="unit" itemType="options" subType="cc_weapons"></app-item-list>
-    <app-item-list [unit]="unit" itemType="options" subType="hand_weapons"></app-item-list>
-    <app-item-list [unit]="unit" itemType="options" subType="granates"></app-item-list>
-    <app-item-list [unit]="unit" itemType="options" subType="mines"></app-item-list>
-    <app-item-list [unit]="unit" itemType="options" subType="consumables"></app-item-list>
+    <app-item-list [unit]="unit" itemType="armor"></app-item-list>
+    <app-item-list [unit]="unit" itemType="heavy_weapons"></app-item-list>
+    <app-item-list [unit]="unit" itemType="weapons"></app-item-list>
+    <app-item-list [unit]="unit" itemType="cc_weapons"></app-item-list>
+    <app-item-list [unit]="unit" itemType="hand_weapons"></app-item-list>
+    <app-item-list [unit]="unit" itemType="granates"></app-item-list>
+    <app-item-list [unit]="unit" itemType="mines"></app-item-list>
+    <app-item-list [unit]="unit" itemType="consumables"></app-item-list>
 </div>
     

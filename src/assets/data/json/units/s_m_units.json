@@ -4,22 +4,17 @@
             "id": "aviator",
             "name": "Aviator",
             "cost": "67",
-            "does_cary":{
-                            "clothing":["aviator_cap"]
-                        },
-            "leader":{
-                            "leader":["heroic","berserker"]
-                    },
-            "options": {   
-                            "armor":[],
-                            "heavy_weapons":[],
-                            "weapons":["assault_rifle","bolt_action_pipe_riﬂe"],
-                            "cc_weapons":["baseball_bat","board"],
-                            "hand_weapons":[],
-                            "granates" :["molotov"],
-                            "mines":["baseball_bat","board"],
-                            "consumables":[]
-                        }
+            "does_cary":["aviator_cap"],
+            "leader":["heroic","berserker"],             
+            "armor":[],
+            "heavy_weapons":[],
+            "weapons":["assault_rifle","bolt_action_pipe_riﬂe"],
+            "cc_weapons":["baseball_bat","board"],
+            "hand_weapons":[],
+            "granates" :["molotov"],
+            "mines":["baseball_bat","board"],
+            "consumables":[]
+          
         },
         {
             "id": "behemoth",
