@@ -14,7 +14,8 @@ export class ItemListComponent implements OnInit  {
   @Input() itemType: string;
   items: Item[];
 
-  constructor(private jsonService: JsonService,
+  constructor(
+    private jsonService: JsonService,
     private storageService: StorageService
     ) {}
 
@@ -32,6 +33,5 @@ export class ItemListComponent implements OnInit  {
     } else {
       this.storageService.removeItemFromUnit(item, this.itemType);
     }
-
-  }
+   }
 }

@@ -15,6 +15,7 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
 import { UnitListComponent } from './unit-list/unit-list.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ListsComponent } from './lists/lists.component';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
   imports: [
@@ -33,6 +34,7 @@ import { ListsComponent } from './lists/lists.component';
     ItemDetailsComponent,
     DashboardComponent,
     ListsComponent,
+    ListComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

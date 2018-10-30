@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { StorageService } from '../../services';
+import { List } from '../../poo';
 @Component({
   selector: 'app-lists',
   templateUrl: './lists.component.html',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListsComponent implements OnInit {
 
-  constructor() { }
+  lists: List[];
+
+  constructor( private storageService: StorageService) { }
 
   ngOnInit() {
+    this.lists = this.storageService.getLists();
   }
 
 }

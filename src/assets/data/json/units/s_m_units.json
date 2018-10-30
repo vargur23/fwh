@@ -3,7 +3,9 @@
         {
             "id": "aviator",
             "name": "Aviator",
+            "faction_id": "super_mutants",
             "cost": "67",
+            "unique": true,
             "does_cary":["aviator_cap"],
             "leader":["heroic","berserker"],             
             "armor":[],

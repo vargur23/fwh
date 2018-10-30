@@ -7,6 +7,7 @@ import { UnitListComponent } from '../app/unit-list/unit-list.component';
 import { UnitDetailsComponent } from '../app/unit-details/unit-details.component';
 import { ItemDetailsComponent } from '../app/item-details/item-details.component';
 import { ListsComponent } from '../app/lists/lists.component';
+import { ListComponent } from '../app/list/list.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'data/:id_faction/:id_unit', component: UnitDetailsComponent },
   { path: 'data/:id_faction/:id_unit/:id_item', component: ItemDetailsComponent },
   { path: 'lists', component: ListsComponent },
+  { path: 'lists/:id_list', component: ListComponent },
 ];
 
 @NgModule({

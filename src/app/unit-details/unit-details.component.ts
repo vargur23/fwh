@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 
-import { Unit, Item } from '../../poo';
+import { Unit } from '../../poo';
 import { JsonService, StorageService } from 'src/services';
 
 @Component({

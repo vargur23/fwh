@@ -1,6 +1,7 @@
 export class Unit {
     id: string;
     name: string;
+    faction_id: string;
     cost: number;
     unique: boolean;
     does_cary: string[];
@@ -16,7 +17,7 @@ export class Unit {
     mines: string[];
     consumables: string[];
 
-    constructor() {
+    constructor( ) {
       this.unique = false;
       this.hero = false;
       this.leader = [];

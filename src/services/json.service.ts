@@ -12,16 +12,16 @@ export class JsonService {
 
   readonly EQUIPMENT_DBS = [
     'leader',
-     'armor',
-      'clothing',
-       'heavy_weapons',
-        'weapons',
-         'cc_weapons',
-          'hand_weapons',
-           'granates',
-            'mines',
-             'consumables'
-            ];
+    'armor',
+    'clothing',
+    'heavy_weapons',
+    'weapons',
+    'cc_weapons',
+    'hand_weapons',
+    'granates',
+    'mines',
+    'consumables'
+    ];
 
   constructor() { }
 

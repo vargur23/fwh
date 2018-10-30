@@ -1,5 +1,7 @@
 'use strict';
 
+// Hero cost
+export const hero_cost = 60;
 // Factions DB
 export const factions_json_path = 'src/assets/data/json/factions/faction.json';
 

@@ -1,0 +1,5 @@
+<section *ngIf="units?.length > 0">
+    <li *ngFor="let unit of units"> 
+      <div> {{unit.name}}:{{unit.cost}}</div>
+    </li>
+</section>
