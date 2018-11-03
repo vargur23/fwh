@@ -28,7 +28,7 @@ export class StorageService {
      let contains = false;
      if (this.unit.unique) {
       this.activeList.data.map(u => {
-        if (u.id = this.unit.id ) {
+        if (u.id === this.unit.id ) {
           contains = true;
          }
       });
@@ -79,6 +79,10 @@ export class StorageService {
       return this.storage.data;
    }
 
+   deleteList(id: string): void {
+    this.storage.data = this.storage.data.filter(l => l.id !== id );
+   }
+
    writeList(list: List) {
     this.storage.data.map(l => {
       if (l.name === list.name) {
@@ -101,20 +105,21 @@ export class StorageService {
   getUnitCost(unit: Unit): number {
     let sumcost = unit.cost * 1;
     if ( unit.hero ) {
-      sumcost += globals.hero_cost;
+      sumcost += globals.hero_cost * 1;
     }
+
     sumcost =
     sumcost
-    + this.getEquipmentCost(unit.leader)
-    + this.getEquipmentCost(unit.perks)
-    + this.getEquipmentCost(unit.armor)
-    + this.getEquipmentCost(unit.heavy_weapons)
-    + this.getEquipmentCost(unit.weapons)
-    + this.getEquipmentCost(unit.cc_weapons)
-    + this.getEquipmentCost(unit.hand_weapons)
-    + this.getEquipmentCost(unit.granates)
-    + this.getEquipmentCost(unit.mines)
-    + this.getEquipmentCost(unit.consumables);
+    + this.getEquipmentCost(unit.leader) * 1
+    + this.getEquipmentCost(unit.perks) * 1
+    + this.getEquipmentCost(unit.armor) * 1
+    + this.getEquipmentCost(unit.heavy_weapons) * 1
+    + this.getEquipmentCost(unit.weapons) * 1
+    + this.getEquipmentCost(unit.cc_weapons) * 1
+    + this.getEquipmentCost(unit.hand_weapons) * 1
+    + this.getEquipmentCost(unit.granates) * 1
+    + this.getEquipmentCost(unit.mines) * 1
+    + this.getEquipmentCost(unit.consumables) * 1;
     return sumcost;
   }
 
@@ -160,7 +165,12 @@ export class StorageService {
      this.unit.id = unit.id;
      this.unit.name = unit.name;
      this.unit.cost = unit.cost;
+     this.unit.unique = unit.unique;
      this.unit.does_cary = unit.does_cary;
+   }
+
+   removeUnit(id: string): void {
+     
    }
 
    addItemToUnit(item: Item, itemType: string): void {
